@@ -6,13 +6,18 @@
 	"dockerFile": "../Dockerfile",
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash"
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"ruby.intellisense": "rubyLocate",
+		"ruby.useLanguageServer": true,
+		"solargraph.definitions": true,
+		"solargraph.diagnostics": true
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"donjayamanne.githistory",
 		"rebornix.ruby",
-		"kaiwood.endwise"
+		"kaiwood.endwise",
+		"castwide.solargraph"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
