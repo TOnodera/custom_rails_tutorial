@@ -12,8 +12,7 @@
 	"extensions": [
 		"donjayamanne.githistory",
 		"rebornix.ruby",
-		"kaiwood.endwise",
-		"esbenp.prettier-vscode"
+		"kaiwood.endwise"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
