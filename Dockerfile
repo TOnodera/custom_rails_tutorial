@@ -9,4 +9,6 @@ RUN apk update \
 WORKDIR /home/ruby/app
 COPY . /home/ruby/app
 ENV TZ="Asia/Tokyo"
+EXPOSE 8000
 
+CMD ['ruby','/home/ruby/server.rb']
