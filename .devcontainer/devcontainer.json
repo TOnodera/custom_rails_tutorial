@@ -10,14 +10,18 @@
 		"ruby.intellisense": "rubyLocate",
 		"ruby.useLanguageServer": true,
 		"solargraph.definitions": true,
-		"solargraph.diagnostics": true
+		"solargraph.diagnostics": true,
+		"files.associations": {
+			//"*.erb": "html",
+		}
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"donjayamanne.githistory",
 		"rebornix.ruby",
 		"kaiwood.endwise",
-		"castwide.solargraph"
+		"castwide.solargraph",
+		"abusaidm.html-snippets"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
