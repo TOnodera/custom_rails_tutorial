@@ -59,8 +59,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  solargraph
-  sqlite3
+  rubocop (= 1.14.0)
+  solargraph (= 0.40.4)
+  sqlite3 (= 1.4.2)
 
 BUNDLED WITH
    2.1.4

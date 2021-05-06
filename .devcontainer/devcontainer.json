@@ -14,7 +14,12 @@
 		"solargraph.commandPath": "/usr/local/bundle/bin/solargraph",
 		"files.associations": {
 			//"*.erb": "html",
-		}
+		},
+		"[ruby]": {
+			"editor.formatOnSave": true
+		},
+		"ruby.format": "rubocop",
+		"editor.formatOnSaveTimeout": 5000
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
