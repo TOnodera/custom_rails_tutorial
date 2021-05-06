@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザー登録画面</title>
+</head>
+<body>
+
+    <form method="POST" action="/"><!--action で""で指定すると同じスクリプトindex.html.erbで処理することになる-->
+        <input type="hidden" name="operation" value="edit">
+        <input type="hidden" name="id" value="<%=row['id']%>">
+        名前：<input name="name" value="<%=row['name'].force_encoding('utf-8')%>"/> Email:<input name="email" value="<%=row['email'].force_encoding('utf-8')%>">        
+        <button>更新</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザー登録画面</title>
+</head>
+<body>
+
+    <% if rows.size > 0%>
+    <form action="/" method="POST" onsubmit="return confirm()">
+        <input type="hidden" name="operation" value="delete">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>名前</th>
+                    <th>Email</th>
+                    <th>編集</th>
+                    <th>削除</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% rows.each do |row| %>
+                    <tr>
+                        <td> <%= row["id"]%></td>
+                        <td> <%= row["name"].force_encoding('utf-8') %> </td>
+                        <td> <%= row["email"].force_encoding('utf-8') %> </td>
+                        <td><button type="button" onclick="location.href='/editor?id=<%=row['id']%>'">編集</button></td>
+                        <td><button name="id" value=<%= row["id"]%>>削除</button></td>
+                        <!--  sqlite3は内部的にASCII-8bitのエンコーディングでデータ持ってるらしくforce_encoding('utf-8')しないとエラーになる。ここもキモいのでリファクタしよう -->
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </form>
+    <% end %>
+
+    <form method="POST" action="/"><!-- action = "/" で指定してserver.mount_proc '/' で処理させる -->
+        <input type="hidden" name="operation" value="create">
+        名前：<input name="name"/> Email:<input name="email">        
+        <button>登録</button>
+    </form>
+
+    <script>
+    const confirm = ()=>{
+        //formのonsubmitイベントで設定。フォーム送信前に確認。OKなら送信
+        if(window.confirm(`${name}さんを削除します。よろしいですか？`)){
+            return true;
+        }
+        return false;
+    }
+    </script>
+
+</body>
+</html>
