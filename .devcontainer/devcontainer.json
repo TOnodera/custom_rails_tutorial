@@ -11,6 +11,7 @@
 		"ruby.useLanguageServer": true,
 		"solargraph.definitions": true,
 		"solargraph.diagnostics": true,
+		"solargraph.commandPath": "/usr/local/bundle/bin/solargraph",
 		"files.associations": {
 			//"*.erb": "html",
 		}
